@@ -3,7 +3,8 @@
     "name": "nw.js browser framework",
     "showDevTools":false,
     "header":{
-        "navigation":true,
+        "back":true,
+        "forward":true,
         "refresh":true,
         "dev":true,
         "address":true
