@@ -24,7 +24,7 @@ Edit the config for basic customiztions.
 |header.back|bool|shows the back button for navigating to the previous page|
 |header.forward|bool|shows the forward button for navigating to the next page in the history|
 |header.refresh|bool|shows the refresh button to reload the current page|
-|header.dev|bool|shows the dev tools button allowing dev tools for *** ONLY *** the webpage, this does *** NOT *** give access to your nw browser dev tools. Just the website.|
+|header.dev|bool|shows the dev tools button allowing dev tools for ***ONLY*** the webpage, this does ***NOT*** give access to your nw browser dev tools. Just the website.|
 
 
 ### To Do
