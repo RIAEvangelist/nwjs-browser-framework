@@ -4,7 +4,7 @@ You can use this "framework" to quickly and easily start your own browser or use
 
 ### Basic use
 
-Edit the config for basic customiztions.
+Obviously, this is for use with [nwjs](https://github.com/nwjs/nw.js). Edit the config for basic customiztions.
 
     {
         "homepage": "google.com",
