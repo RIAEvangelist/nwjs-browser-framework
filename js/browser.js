@@ -31,7 +31,7 @@ function init(){
         window.nwjsProxy='http://www.webproxy.net/view?q=';
     }
     
-    if(!config.homepage.indexOf('//')>-1){
+    if(config.homepage.indexOf('//')<0){
         config.homepage='http://'+config.homepage;
     }
     
@@ -53,12 +53,15 @@ function initBrowser(){
         nwjsBrowser.addEventListener(
             'load', 
             function() {
-                console.log('addEventListener(load)');
-                try{
-                    nwjsBrowser.contentWindow.document.querySelector('#webproxy_wp_bar_brd').click()
-                }catch(err){
-                    
-                }
+                setTimeout(
+                    function(){
+                        try{
+                            nwjsBrowser.contentWindow.document.querySelector('#webproxy_wp_bar_brd').click()
+                        }catch(err){
+
+                        }
+                    },1000
+                );
             }
         );
     }
@@ -97,6 +100,10 @@ function initBrowser(){
 function go(e){
     if(e.keyCode!==13){
         return;
+    }
+    
+    if(e.target.value.indexOf('//')<0){
+        e.target.value='http://'+e.target.value;
     }
     
     nwjsBrowser.contentWindow.window.location.href=nwjsProxy+e.target.value;
