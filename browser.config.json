@@ -8,5 +8,6 @@
         "refresh":true,
         "dev":true,
         "address":true
-    }
+    },
+    "proxy":true
 }

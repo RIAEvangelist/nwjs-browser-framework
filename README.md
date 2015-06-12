@@ -16,7 +16,8 @@ Obviously, this is for use with [nwjs](https://github.com/nwjs/nw.js). Edit the 
             "refresh":true,
             "dev":true,
             "address":true
-        }
+        },
+        "proxy":true
     }
     
 |  config key | expects |  what it does |

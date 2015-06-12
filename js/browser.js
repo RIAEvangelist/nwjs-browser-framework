@@ -25,6 +25,12 @@ window.addEventListener(
 );
 
 function init(){
+    window.nwjsProxy='';
+    
+    if(config.proxy){
+        window.nwjsProxy='http://www.webproxy.net/view?q=';
+    }
+    
     if(!config.homepage.indexOf('//')>-1){
         config.homepage='http://'+config.homepage;
     }
@@ -63,7 +69,7 @@ function initBrowser(){
             
             win.title=config.name;
             nwjsHeader.querySelector('#address').value=config.homepage;
-            nwjsBrowser.contentWindow.window.location.href=config.homepage;
+            nwjsBrowser.contentWindow.window.location.href=window.nwjsProxy+config.homepage;
             setTimeout(
                 function(){
                     nwjsBrowser.style.opacity=1;
@@ -79,14 +85,14 @@ function go(e){
         return;
     }
     
-    nwjsBrowser.contentWindow.window.location.href=e.target.value;
+    nwjsBrowser.contentWindow.window.location.href=window.nwjsProxy+e.target.value;
 }
 
 function navigate(e){
     switch(e.target.id){
         case 'back' :
         case 'forward' :
-            nwjsBrowser.contentWindow.window.history[e.target.id];
+            nwjsBrowser.contentWindow.window.history[e.target.id]();
             break;
         case 'refresh' :
             nwjsBrowser.contentWindow.window.location.reload();
