@@ -29,6 +29,7 @@ Obviously, this is for use with [nwjs](https://github.com/nwjs/nw.js). Edit the 
 |header.forward|bool|shows the forward button for navigating to the next page in the history|
 |header.refresh|bool|shows the refresh button to reload the current page|
 |header.dev|bool|shows the dev tools button allowing dev tools for ***ONLY*** the webpage, this does ***NOT*** give access to your nw browser dev tools. Just the website.|
+|proxy|bool|uses very basic [web proxy](http://www.webproxy.net/) to route communications. Just a quick way to hide your IP, some sites might not like it though. |
 
 ### Basic Example
 
