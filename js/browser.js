@@ -49,6 +49,20 @@ function initBrowser(){
     window.nwjsHeader=document.querySelector('header');
     window.nwjsBrowser=document.querySelector('#browser');
     
+    if(config.proxy){
+        nwjsBrowser.addEventListener(
+            'load', 
+            function() {
+                console.log('addEventListener(load)');
+                try{
+                    nwjsBrowser.contentWindow.document.querySelector('#webproxy_wp_bar_brd').click()
+                }catch(err){
+                    
+                }
+            }
+        );
+    }
+    
     nwjsHeader.addEventListener(
         'click',
         navigate
@@ -69,7 +83,7 @@ function initBrowser(){
             
             win.title=config.name;
             nwjsHeader.querySelector('#address').value=config.homepage;
-            nwjsBrowser.contentWindow.window.location.href=window.nwjsProxy+config.homepage;
+            nwjsBrowser.contentWindow.window.location.href=nwjsProxy+config.homepage;
             setTimeout(
                 function(){
                     nwjsBrowser.style.opacity=1;
@@ -85,7 +99,7 @@ function go(e){
         return;
     }
     
-    nwjsBrowser.contentWindow.window.location.href=window.nwjsProxy+e.target.value;
+    nwjsBrowser.contentWindow.window.location.href=nwjsProxy+e.target.value;
 }
 
 function navigate(e){
