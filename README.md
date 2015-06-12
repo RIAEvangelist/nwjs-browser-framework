@@ -1,5 +1,6 @@
 # nwjs Browser Framework
 
+### Basic use
 
 Edit the config for basic customiztions.
 
@@ -26,6 +27,9 @@ Edit the config for basic customiztions.
 |header.refresh|bool|shows the refresh button to reload the current page|
 |header.dev|bool|shows the dev tools button allowing dev tools for ***ONLY*** the webpage, this does ***NOT*** give access to your nw browser dev tools. Just the website.|
 
+### Basic Example
+
+![nwjs browser](http://i.imgur.com/xHfzdua.png)
 
 ### To Do
 
