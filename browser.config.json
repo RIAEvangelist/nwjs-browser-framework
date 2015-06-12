@@ -1,0 +1,11 @@
+{
+    "homepage": "google.com",
+    "name": "nw.js browser framework",
+    "showDevTools":false,
+    "header":{
+        "navigation":true,
+        "refresh":true,
+        "dev":true,
+        "address":true
+    }
+}

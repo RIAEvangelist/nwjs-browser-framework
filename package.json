@@ -1,0 +1,25 @@
+{
+    "main": "browser.html",
+    "name": "nwjs-browser-framework",
+    "description": "nwjs configureable browser framework",
+    "version": "0.0.1",
+    "nodejs":true,
+    "keywords": [ 
+        "browser", 
+        "nwjs",
+        "node-webkit" 
+    ],
+    "window": {
+        "title": " ",
+        "icon": "icons/browser-128.png",
+        "toolbar": false,
+        "frame": true,
+        "width": 1024,
+        "height": 700,
+        "min_width": 250,
+        "min_height": 250
+    },
+    "webkit": {
+        "plugin": true
+    }
+}
