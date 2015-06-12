@@ -17,7 +17,7 @@ Edit the config for basic customiztions.
     }
     
 |  config key | expects |  what it does |
-|-|-|-|
+|----|----|----|
 |homepage|url|sets the page which the browser will open on launch|
 |name|string|name to show in the application header/chrome|
 |showDevTools|bool|open the nwjs devtools for the whole app, not just the web page|
